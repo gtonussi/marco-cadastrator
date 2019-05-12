@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Marco Cadastrator</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-grid.css">
+        <link rel="stylesheet" href="css/index.css">
+        
+    </head>
+    <body class="container">
+        
+        <h1 class="text-center">Marco Cadastrator</h1>
+
+        <form id="formulario-de-cadastro" onsubmit="negociacaoController.adiciona(event)">
+            
+            <div class="form-group">
+                <label for="nome" class="negrito">Nome:</label>
+                <input id="nome" type="text" placeholder="Nome do Contato" class="form-control"/>
+            </div>   
+
+            <div class="form-row">
+
+                <div class="form-group col-md-3">
+                    <label for="email" class="negrito">E-mail:</label>
+                    <input id="email" type="text" placeholder="E-mail do Contato" class="form-control"/>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="tipo-de-contato" class="negrito">Tipo de Contato:</label>
+                    <select id="tipo-de-contato" class="form-control">
+                        <option value="0">---</option>
+                        <option value="1">Opção 1</option>
+                        <option value="2">Opção 2</option>
+                        <option value="3">Opção 3</option>
+                        <option value="4">Opção 4</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="empresa" class="negrito">Empresa:</label>
+                    <select id="empresa" class="form-control">
+                        <option value="0">---</option>
+                        <option value="1">Opção 1</option>
+                        <option value="2">Opção 2</option>
+                        <option value="3">Opção 3</option>
+                        <option value="4">Opção 4</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="cargo" class="negrito">Cargo:</label>
+                    <input  id="cargo" type="text" placeholder="Cargo Ocupado" class="form-control"/>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-3">
+                    <label for="telefone01" class="negrito">Telefone 1:</label>
+                    <input id="telefone01" type="text" placeholder="+00 00 0000-0000" class="form-control"/>
+                </div>
+        
+                <div class="form-group col-md-3">
+                    <label for="telefone02" class="negrito">Telefone 2:</label>
+                    <input id="telefone02" type="text" placeholder="+00 00 0000-0000" class="form-control"/>
+                </div>
+        
+                <div class="form-group col-md-3">
+                    <label for="celular01" class="negrito">Celular 1:</label>
+                    <input id="celular01" type="text" placeholder="+00 00 00000-0000" class="form-control"/>
+                </div>
+        
+                <div class="form-group col-md-3">
+                    <label for="celular02" class="negrito">Celular 2:</label>
+                    <input id="celular02" type="text" placeholder="+00 00 00000-0000" class="form-control"/>
+                </div>
+
+            </div>
+            
+            <div class="form-row">
+                
+                <div class="form-group col-md-4">
+                    <label for="pais" class="negrito">País:</label>
+                    <select id="pais" class="form-control">
+                        <option>---</option>
+                        <option>Brasil</option>
+                        <option>Estados Unidos</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="estado" class="negrito">Estado:</label>
+                    <select id="estado" class="form-control">
+                        <option>---</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="cidade" class="negrito">Cidade:</label>
+                    <input id="cidade" type="text" placeholder="Cidade da Empresa" class="form-control"/>
+                </div>        
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <label for="endereco" class="negrito">Endereço:</label>
+                    <input id="endereco" type="text" placeholder="Rua da Empresa, 000, Sala 00" class="form-control"/>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="bairro" class="negrito">Bairro:</label>
+                    <input id="bairro" type="text" placeholder="Bairro da Empresa" class="form-control"/>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="cep" class="negrito">CEP:</label>
+                    <input id="cep" type="text" placeholder="00000-000" class="form-control"/>
+                </div>
+
+            </div>       
+            
+            <button id="botao-incluir" class="btn btn-primary" type="submit">Incluir</button>
+            
+            <button id="botao-apagar-campos" class="btn btn-danger" type="reset">Apagar Campos</button>
+
+            <ul id="mensagens-erro"></ul>
+        
+        </form>
+            
+    </body>
+
+    <script src="js\jquery.js"></script>
+    <script src="js\pais-estado.js"></script>
+    <script src="js\main.js"></script>
+    
+</html>
